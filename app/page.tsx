@@ -66,7 +66,7 @@ export default function Home() {
         <h1 className="text-6xl font-extrabold tracking-tighter">
           Mood Palette 🎨
         </h1>
-        <h2>Use AI to generate a color based on a mood</h2>
+        <h2>Use AI to generate a color based on your mood</h2>
       </div>
       <div className="flex justify-center items-end space-x-3">
         <input
