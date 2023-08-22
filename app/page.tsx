@@ -62,24 +62,24 @@ export default function Home() {
 
   return (
     <main className="flex flex-col justify-center items-center bg-black text-white space-y-10">
-      <div className="flex flex-col items-center justify-center mt-20">
+      <div className="flex flex-col p-4 items-center justify-center mt-20">
         <h1 className="text-6xl font-extrabold tracking-tighter">
           Mood Palette 🎨
         </h1>
         <h2>Use AI to generate a color based on your mood</h2>
       </div>
-      <div className="flex justify-center items-end space-x-3">
+      <div className="flex flex-col space-y-4 justify-center items-end space-x-3 md:flex-row md:space-y-0">
         <input
           name="color"
           type="text"
-          className="text-white placeholder-zinc-400 bg-zinc-900 h-12 rounded-lg px-6 cursor-pointer text-sm w-80 ring-1 ring-slate-900/10 shadow-sm focus:outline-none hover:bg-zinc-800"
+          className="text-white placeholder-zinc-400 bg-zinc-900 h-12 rounded-lg px-6 cursor-pointer text-sm ring-1 ring-slate-900/10 shadow-sm w-full md:w-80 focus:outline-none hover:bg-zinc-800"
           placeholder={placeholder}
           value={mood}
           onChange={(e) => setMood(e.target.value)}
           onKeyDown={handleKeyDown}
         />
         <button
-          className="px-6 text-sm text-center font-medium h-12 rounded-lg bg-indigo-600 hover:bg-indigo-500 disabled:bg-indigo-950 disabled:hover:cursor-not-allowed"
+          className="px-6 text-sm text-center font-medium h-12 rounded-lg bg-indigo-600 w-full md:w-fit hover:bg-indigo-500 disabled:bg-indigo-950 disabled:hover:cursor-not-allowed"
           onClick={handleClick}
           disabled={loading || !mood}
         >
